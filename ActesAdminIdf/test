@@ -1,0 +1,46 @@
+.filter-list {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.categories {
+    display: flex;
+    align-items: center;
+}
+
+.select-container {
+    display: flex;
+    gap: 10px;
+}
+
+select {
+    height: 40px;
+    padding: 0 15px;
+    border: 1px solid #111751;
+    border-radius: 4rem;
+    background-color: #FFF;
+}
+
+.filter-container {
+    display: inline-flex;
+    align-items: center;
+}
+
+.search-module-container {
+    width: 100%;
+    height: auto;
+}
+
+.filter-date {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.clear-filters {
+    display: inline-flex;
+    align-items: center;
+    margin-left: auto;
+}
