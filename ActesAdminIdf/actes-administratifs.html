@@ -1,7 +1,15 @@
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="actes-administratifs.css" rel="stylesheet">
+    <link href="detail-actes-administratifs.css" rel="stylesheet">
+</head>
+<body>
 <div class="container"
      ng-init="domain = 'datailedefrance.opendatasoft.com';
                 datasetid = 'actes-administratifs';
@@ -104,9 +112,11 @@
                        type="text"/>
                 <button class="search-module-clear"
                         ng-if="ctx.parameters['q']"
-                        ng-click="ctx.parameters['q'] = undefined;ctx.parameters['start'] = undefined">
+                        ng-click="ctx.parameters['q'] = undefined;ctx.parameters['start'] = undefined"
+                        title="Clear search">
                     <i class="cridf-icon cridf-icon--cancel" aria-hidden="true"></i>
                 </button>
+
             </div>
 
             <!-- FILTERS Search & Select -->
@@ -299,4 +309,5 @@
 -->        
     </ods-dataset-context>
 </div>
-
+</body>
+</html>
