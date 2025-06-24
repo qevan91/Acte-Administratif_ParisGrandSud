@@ -247,6 +247,7 @@ h2{font-size: 1rem;
 .filter-list {
     margin-top: 0;
     flex-wrap: wrap;
+    height: px;
 }
 
 .search-wrapper {
@@ -283,6 +284,7 @@ select {
     border-radius: 4px;
     background-color: white;
     min-width: 200px;
+    height: 45px;
 }
 
 /* Pour assurer la réactivité sur mobile */
