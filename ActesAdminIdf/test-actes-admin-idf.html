@@ -2,6 +2,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 
 <div class="container"
      ng-init="domain = 'datailedefrance.opendatasoft.com';
@@ -84,7 +85,7 @@
                     <button class="search-module-clear"
                             ng-if="ctx.parameters['q']"
                             ng-click="ctx.parameters['q'] = undefined;ctx.parameters['start'] = undefined">
-                        <i class="cridf-icon cridf-icon--cancel" aria-hidden="true"></i>
+                        <span class="material-symbols-outlined">close</span>
                     </button>
                 </div>
 
@@ -93,13 +94,14 @@
                      ng-init="dropdown.open = '';
                       select = {}">
                     <div class="categories">
-                        <div class="select-container">
-                            <select name="categories" id="categories-select">
-                                <option value="">Choisissez une option</option>
+                        <div class="search-wrapper">
+                            <select name="categories" id="categories-select-1">
+                                <option value="">Entité Emettrice</option>
                             </select>
-                            <select name="categories" id="categories-select">
-                                <option value="">Choisissez une option</option>
+                            <select name="categories" id="categories-select-2">
+                                <option value="">Thème</option>
                             </select>
+                            <button type="submit" class="submit-btn">Rechercher</button>
                         </div>
                     </div>
                     <div ng-repeat="filter in filters">
