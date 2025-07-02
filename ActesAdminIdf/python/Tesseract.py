@@ -22,10 +22,10 @@ def extractScannedPDF(pdf_path):
                 page_text = pytesseract.image_to_string(img, lang='fra')
                 if page_text.strip():
                     print(f"  -> Texte extrait de la page {page_num + 1} (début) : '{page_text.strip()[:100]}...'")
+                    text += page_text + "\n" # Ajoute le texte de la page suivi d'un saut de ligne
                 else:
                     print(f"  -> Aucun texte détecté sur la page {page_num + 1}.")
 
-                text += page_text + "\n--- Fin de la page " + str(page_num + 1) + " ---\n\n"
             except Exception as page_e:
                 print(f"  -> Erreur lors de l'extraction OCR de la page {page_num + 1} : {page_e}")
                 text += f"\n--- Erreur sur la page {page_num + 1} : {page_e} ---\n\n"
@@ -35,8 +35,8 @@ def extractScannedPDF(pdf_path):
         print(f"Une erreur générale est survenue lors de l'ouverture ou du traitement du PDF : {e}")
         return None
 
-pdf_file = "../data/pdf/del_2025_124.pdf"
-output_file = "../data/ExtractedText/del_2025_124.txt"
+pdf_file = "../data/pdf/dec_2025_0367.pdf"
+output_file = "../data/ExtractedText/dec_2025_0367.txt"
 
 extracted_content = extractScannedPDF(pdf_file)
 
